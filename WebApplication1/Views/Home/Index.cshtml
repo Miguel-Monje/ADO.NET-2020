@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script type="text/javascript">
+
+    function mensaje() {
+        //esto es un objeto de javascript, hasta js es6 no llegan las clases
+        var objeto = {
+            mensaje: "hola objeto",
+            mifuncion: function () {
+                alert("funciona");
+            }
+        };
+        objeto.mifuncion();
+        var midocumento = document.getElementsByTagName("body")[0];
+        var p = document.createElement("p");
+        var texto = document.createTextNode(objeto.mensaje);
+        p.appendChild(texto);
+        midocumento.appendChild(p);
+
+       $(document).ready(function () {
+            alert("jquery funciona");
+        });
+    }
+
+</script>
+
+<div>
+    <input type="button" value="aceptar" onclick="mensaje()" />
+</div>
